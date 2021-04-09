@@ -110,7 +110,7 @@ bot.on('message', function (message) {
 
             if (message.content && message.content != '') {
                 logger.info(`$`);
-                post_data.content = `**[${message.guild.name}]** **[${message.channel.name}]** **[${message.member.user.tag}]**: ${message.content}`
+                post_data.content = `${message.author.tag}: ${message.content}`
             }
 
             if (message.embeds.length > 0) {
